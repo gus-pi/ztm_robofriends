@@ -4,6 +4,7 @@ import CardList from './CardList';
 import SearchBox from './SearchBox';
 import { Robot } from './lib/types';
 import './App.css';
+import Scroll from './Scroll';
 
 class App extends React.Component<any, any> {
   constructor(props: any) {
@@ -40,7 +41,9 @@ class App extends React.Component<any, any> {
             searchChange={this.onSearchChange}
             searchfield={this.state.searchfield}
           />
-          <CardList robots={filteredRobots} />
+          <Scroll>
+            <CardList robots={filteredRobots} />
+          </Scroll>
         </div>
       );
     }
