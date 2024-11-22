@@ -4,6 +4,7 @@ import './App.css';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
 import CardList from '../components/CardList';
+import ErrorBoundary from '../components/ErrorBoundary';
 
 class App extends React.Component<any, any> {
   constructor(props: any) {
@@ -41,7 +42,9 @@ class App extends React.Component<any, any> {
           searchfield={searchfield}
         />
         <Scroll>
-          <CardList robots={filteredRobots} />
+          <ErrorBoundary>
+            <CardList robots={filteredRobots} />
+          </ErrorBoundary>
         </Scroll>
       </div>
     );
