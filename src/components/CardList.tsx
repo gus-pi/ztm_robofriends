@@ -1,5 +1,5 @@
+import { Robot } from '../lib/types';
 import Card from './Card';
-import { Robot } from './lib/types';
 
 const CardList = ({ robots }: { robots: Robot[] }) => {
   return (
