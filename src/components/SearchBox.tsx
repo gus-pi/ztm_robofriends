@@ -15,7 +15,6 @@ const SearchBox = ({ searchChange, searchfield }: searchBoxProps) => {
         value={searchfield}
         placeholder="Search robots"
       />
-      ;
     </div>
   );
 };
